@@ -14,7 +14,7 @@ wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearm
 echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https://artifacts.elastic.co/packages/9.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-9.x.list
 
 # 5) install Elastic components
-sudo apt-get update -y && sudo apt-get install -y elasticsearch kibana logstash filebeat
+sudo apt-get update -y && sudo apt-get install -y elasticsearch kibana logstash filebeat 
 
 # 6) configure Kibana to listen on all interfaces
 sudo sed -i.bak '/^[[:space:]]*#server\.host:[[:space:]]*"localhost"[[:space:]]*$/a server.host: 0.0.0.0' /etc/kibana/kibana.yml

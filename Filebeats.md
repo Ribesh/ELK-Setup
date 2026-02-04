@@ -1,4 +1,4 @@
-## 1. Install Filebeats sepeate EC2 Machine
+### 1. Install Filebeats sepeate EC2 Machine
 ```sh
 wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 
@@ -16,7 +16,7 @@ sudo systemctl enable --now filebeat
 ```
 
 
-## 2. Generate Fake Logs (Simple)
+### 2. Generate Fake Logs (Simple)
 Create a fake application
 
 ```sh
@@ -56,7 +56,7 @@ Bring it to foreground
 fg %1
 ```
 
-## 3. Configure Filebeat
+### 3. Configure Filebeat
 ```sh
 sudo vi /etc/filebeat/filebeat.yml
 ```
@@ -88,7 +88,7 @@ output.elasticsearch:
   ssl.verification_mode: none
 ```
 
-## 4. Validation
+### 4. Validation
 ```bash
 sudo filebeat test config
 sudo filebeat test output
@@ -119,7 +119,7 @@ sudo systemctl restart filebeat
 sudo systemctl status filebeat
 ```
 
-## 5. IN ELK, Server
+### 5. IN ELK, Server
 ```bash
 curl -k -u elastic https://localhost:9200/_cat/indices?v | grep filebeat
 ```
