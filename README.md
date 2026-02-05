@@ -72,5 +72,9 @@ sudo /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s kiban
     ```
 ---
 
-## Build and Run the Python Application in Docker
-➡️ [Create Dummy Docker Application](app/Create%20Dummy%20Application.md)
+## **[For ELK only]** Build and Run the Python Application in Docker
+➡️ ✅ [Create Dummy Docker Application ELK](app/Create%20Dummy%20Application.md)
+
+
+## **[For both ELK & Cloudwatch]** Build and Run the Python Application in Docker
+➡️ ✅ [Create Dummy Application ELK + Cloudwatch](cloudwatch-app/README.md)

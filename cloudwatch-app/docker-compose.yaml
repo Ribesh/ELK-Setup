@@ -1,0 +1,12 @@
+services:
+  log-app:
+    build: .
+    container_name: demo-log-app
+    volumes:
+      - ~/.aws:/root/.aws:ro
+    environment:
+      AWS_REGION: us-east-1
+      CW_LOG_GROUP: demo-log-app
+      CW_LOG_STREAM: ribesh-stream
+      LOGSTASH_HOST: <your-logstash-host>      #<-- replace with your Logstash host
+      LOGSTASH_PORT: 5044
